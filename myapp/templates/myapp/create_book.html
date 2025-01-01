@@ -1,0 +1,23 @@
+<h2>책 생성하기</h2>
+<form method="post">
+  {% csrf_token %}
+  <p>
+    {{ form.title.label_tag}}
+    {{ form.title }}
+  </p>
+  <p>
+    {{ form.author.label_tag}}
+    {{ form.author }}
+  </p>
+  <p>
+    {{ form.publication_date.label_tag}}
+    {{ form.publication_date }}
+  </p>
+  <p style="color: gray; font-size: 0.9em;">발행일 예시: 2002-02-10</p>
+  
+  <p>
+    {{ form.price.label_tag}}
+    {{ form.price}}
+  </p>
+  <button type="submit">저장</button>
+</form>
